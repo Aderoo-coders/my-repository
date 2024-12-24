@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Subscription Form</title>
+  <style>
+    /* General Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fb;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container for the subscription form */
+.subscription-container {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Heading Style */
+.subscription-container h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Paragraph Style */
+.subscription-container p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Styling for the input container */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Email Input Field */
+.input-container input {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 70%;
+  margin-right: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.input-container input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Subscribe Button */
+.input-container button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.input-container button:hover {
+  background-color: #45a049;
+}
+
+/* Result Message */
+#result {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+  </style>
+</head>
+<body>
+
+  <div class="subscription-container">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Stay updated with the latest news and promotions.</p>
+    
+    <form id="subscriptionForm" name="submit-to-google-sheet">
+      <div class="input-container">
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </div>
+      <div id="result"></div> 
+    </form>
+  </div>
+<script>
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyXswtPIbeQsv7u3EPJRFGqc7V0qFKutWO7pDKCk7QG7AMbJVlf4yvYtNyscTzjzBfo/exec';
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>

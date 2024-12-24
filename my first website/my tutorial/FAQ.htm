@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #555;
+        }
+
+        .faq {
+            margin-top: 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .faq-question {
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #007BFF;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer.visible {
+            display: block;
+        }
+
+        .faq-answer {
+            display: none;
+            transition: max-height 1.2s ease-in;
+        }
+        .faq-question.active .faq-answer svg {
+            max-height: 300px;
+        }
+        .faq-question.active svg {
+            transform: rotate(180deg);
+        }
+
+        .faq-question:hover {
+            cursor: pointer;
+        }
+        svg {
+            transition: transform .5s ease-in;
+        }
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq">
+            <div class="faq-item">
+                <div class="faq-question">
+                    What is this page about? <svg class="" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#4B77D1"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </div>
+                <div class="faq-answer">
+                    This is a simple FAQ page demonstrating HTML, CSS, and JavaScript. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil, voluptates?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam beatae, ex molestiae a officiis omnis temporibus tempore velit labore, consectetur vitae ratione error voluptas veniam et. Magni voluptate maiores repudiandae!
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    How does the FAQ section work? <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#4B77D1"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </div>
+                <div class="faq-answer">
+                    You can click on the questions to reveal or hide the answers. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit eius error explicabo deserunt sint. Fuga. Lorem ipsum dolor sit amet.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Can I add more questions? <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#4B77D1"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </div>
+                <div class="faq-answer">
+                    Yes! You can add more FAQ items in the HTML structure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, architecto ex possimus quam ut voluptates nobis optio laboriosam dolorum aperiam voluptatum illum, obcaecati, deserunt reiciendis eaque mollitia deleniti velit? Blanditiis.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    what is web development ? <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#4B77D1"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </div>
+                <div class="faq-answer">
+                    Yes! You can add more FAQ items in the HTML structure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, architecto ex possimus quam ut voluptates nobis optio laboriosam dolorum aperiam voluptatum illum, obcaecati, deserunt reiciendis eaque mollitia deleniti velit? Blanditiis.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perspiciatis doloribus eius ut cupiditate repudiandae totam nemo recusandae! Delectus nostrum tempora distinctio nam officiis omnis adipisci ab ad sit odit.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    what is difference between web application and website design ? <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#4B77D1"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg>
+                </div>
+                <div class="faq-answer">
+                    Yes! You can add more FAQ items in the HTML structure. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, architecto ex possimus quam ut voluptates nobis optio laboriosam dolorum aperiam voluptatum illum, obcaecati, deserunt reiciendis eaque mollitia deleniti velit? Blanditiis.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci perspiciatis doloribus eius ut cupiditate repudiandae totam nemo recusandae! Delectus nostrum tempora distinctio nam officiis omnis adipisci ab ad sit odit.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        document.querySelector('.faq').addEventListener('click', event => {
+            if (event.target.classList.contains('faq-question')) {
+                const question = event.target;
+                const answer = question.nextElementSibling;
+
+                question.classList.toggle('active');
+                answer.classList.toggle('visible'); 
+            }
+        });
+    </script>
+</body>
+</html>

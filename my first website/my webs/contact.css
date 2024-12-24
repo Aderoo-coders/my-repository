@@ -1,0 +1,161 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+ * {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Styling for the SVG */
+svg {
+    width: 100%;
+    height: auto;
+}
+.innerhtml {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: transparent;
+    margin: auto 0;
+}
+.contact-info {
+    flex: 1 1 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.contact-info h3 {
+    margin-bottom: 16px;
+    text-transform: capitalize;
+    color: #00cba9;
+}
+.contact-info p {
+    margin-bottom: 15px;
+    line-height: 2;
+    text-transform: capitalize;
+}
+.contact-info span {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.contact-info span i {
+    margin-right: 10px;
+    color: #00cba9;
+    font-size: 22px;
+}
+.link a {
+    color: #00cba9;
+    margin: 0 10px;
+    font-size: 30px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.link a:hover {
+    color: #007d6b;
+}
+.contact-us {
+    flex: 1 1 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.contact-us h1 {
+    text-transform: capitalize;
+    color: #00cba9;
+    padding: 20px;
+}
+.contact-me input,
+.contact-me textarea {
+    width: 400px;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    text-transform: capitalize;
+    opacity: .9;
+    overflow: hidden;
+}
+.contact-me .mess {
+    padding-bottom: 70px;
+    height: 80px;
+    resize: none;
+}
+.contact-us .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #00cba9;
+}
+@media (max-width:768px) {
+    .innerhtml {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .contact-info,
+    .contact-us {
+        flex: 1 1 auto;
+        margin: 0 10px;
+    }
+    .contact-me input,
+    .contact-me textarea {
+        font-size: 14px;
+    }
+    .contact-us h1 {
+        font-size: 22px;
+    }
+}
+@media (max-width: 480px) {
+    .contact-info span {
+        font-size: 14px;
+    }
+    .link a {
+        font-size: 20px;
+    }
+    .contact-me input,
+    .contact-me textarea,
+    .contact-me .mess {
+        font-size: 12px;
+    }
+    .contact-us .btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+@media all and (max-width:470px) {
+    .innerhtml {
+        width: 100%;
+        margin-right: 50px;
+    }
+    svg {
+        width: 100%;
+        display: inline-block;
+    }
+    
+}
+
+    

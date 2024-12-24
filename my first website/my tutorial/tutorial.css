@@ -1,0 +1,54 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif, 'poppins';
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: darkseagreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blank-space {
+    padding: 30px;
+    background-color: rgb(19, 17, 32);
+}
+.blank-space form input {
+    margin: 20px;
+    font-size: 20px;
+    border: 0;
+    outline: 0;
+    width: 40px;
+    background: transparent;
+    cursor: pointer;
+box-shadow: 0px 0px 1px rgba(3, 7, 18, 0.35),
+0px 0px 6px rgba(3, 7, 18, 0.31),
+0px 0px 13px rgba(3, 7, 18, 0.27),
+0px 1px 23px rgba(3, 7, 18, 0.23),
+0px 1px 35px rgba(3, 7, 18, 0.19),
+0px 2px 51px rgba(3, 7, 18, 0.16),
+0px 2px 69px rgba(3, 7, 18, 0.12),
+0px 3px 90px rgba(3, 7, 18, 0.08),
+0px 4px 114px rgba(3, 7, 18, 0.04);
+color: aliceblue;
+
+}
+.blank-space .display {
+
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+.blank-space .display input {
+    text-align: right;
+    flex: 1;
+    font-size: 30px;
+    box-shadow: none;
+}

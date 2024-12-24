@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Sidebar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#toggleButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    overflow: hidden;
+    transition: left 0.3s ease; /* Smooth slide-in animation */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li  {
+    padding: 15px;
+
+    border-bottom: 1px solid #444;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #444;
+}
+
+.sidebar.open {
+    left: 0; /* Slide into view */
+}
+ 
+    </style>
+</head>
+<body>
+    <button id="toggleButton">☰ Menu</button>
+    <div id="sidebar" class="sidebar">
+        <ul>
+            <li><a href="#">Home</a></li> 
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <script>
+        const btn = document.getElementById('toggleButton');
+        const sidebar = document.getElementById('sidebar');
+        btn.addEventListener('click', function(){
+            const menu = document.querySelector('ul');
+           sidebar.classList.toggle('open');
+           if (btn.classList.contains('sidebar')) {
+            sidebar.classList.toggle('open');
+
+        }
+        else {
+            sidebar.classList.remove('btn');
+            
+            btn.innerHTML = '<span>X</span>';  
+        }
+        })
+    </script>
+</body>
+</html>
